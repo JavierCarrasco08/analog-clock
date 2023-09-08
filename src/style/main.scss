@@ -35,10 +35,15 @@ body {
   }
 
   &__content {
-    display: flex;
     position: absolute;
   }
-
+  &__numbers {
+    width: 100%;
+    height: 100%;
+    font-size: 1rem;
+    color: $primary-color-text-disabled;
+    font-weight: 700;
+  }
   &__clock {
     position: relative;
     display: flex;
@@ -59,8 +64,6 @@ body {
   &__toolM,
   &__toolS,
   &__tool {
-    height: 1rem;
-    width: 1rem;
     position: absolute;
     width: 1rem;
     height: 1rem;
@@ -118,17 +121,10 @@ body {
   &__second::after {
     background-color: $primary-background-second;
     width: 5.5rem;
+    height: 0.2rem;
     top: -3rem;
   }
-  &__numbers {
-    width: 100%;
-    height: 100%;
-  }
-  &__number {
-    font-size: 1rem;
-    color: $primary-color-text;
-  }
-  &__content:first-child {
+  &__content--12 {
     top: 5px;
     left: 50%;
     transform: translateX(-50%);
@@ -137,15 +133,15 @@ body {
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
   }
-  &__content:nth-child(2) {
+  &__content--1 {
     top: 7%;
     right: 70px;
   }
-  &__content:nth-child(3) {
+  &__content--2 {
     top: 25%;
     right: 20px;
   }
-  &__content:nth-child(4) {
+  &__content--3 {
     top: 50%;
     right: 5px;
     transform: translateY(-50%);
@@ -154,15 +150,15 @@ body {
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
   }
-  &__content:nth-child(5) {
+  &__content--4 {
     top: 70%;
     right: 23px;
   }
-  &__content:nth-child(6) {
+  &__content--5 {
     bottom: 7%;
     right: 65px;
   }
-  &__content:nth-child(7) {
+  &__content--6 {
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -171,15 +167,15 @@ body {
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
   }
-  &__content:nth-child(8) {
+  &__content--7 {
     bottom: 7%;
     left: 65px;
   }
-  &__content:nth-child(9) {
+  &__content--8 {
     top: 70%;
     left: 20px;
   }
-  &__content:nth-child(10) {
+  &__content--9 {
     top: 50%;
     left: 5px;
     transform: translateY(-50%);
@@ -188,24 +184,13 @@ body {
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
   }
-  &__content:nth-child(11) {
+  &__content--10 {
     top: 25%;
     left: 17px;
   }
-  &__content:nth-child(12) {
+  &__content--11 {
     top: 7%;
     left: 65px;
-  }
-
-  &__r {
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-  }
-  &__number {
-    font-weight: 700;
   }
 }
 .foo {
@@ -228,5 +213,68 @@ body {
 
   &__img {
     width: 2.5em;
+  }
+}
+
+.active {
+  color: $primary-color-text-active;
+}
+
+@media screen and (min-width: 768px) {
+  .clock {
+    &__clock {
+      height: 500px;
+      width: 500px;
+    }
+    &__numbers {
+      font-size: 2rem;
+    }
+    &__toolH,
+    &__toolM,
+    &__toolS,
+    &__tool {
+      width: 2rem;
+      height: 2rem;
+      border-width: thick;
+    }
+    &__second::after {
+      width: 12rem;
+      height: 0.4rem;
+      top: -5rem;
+    }
+    &__min::after {
+      width: 8rem;
+      top: -3rem;
+    }
+    &__hour::after {
+      width: 5rem;
+      top: -2rem;
+    }
+    &__content--1 {
+      right: 125px;
+    }
+    &__content--2 {
+      right: 40px;
+    }
+    &__content--4 {
+      right: 40px;
+    }
+    &__content--5 {
+      bottom: 6%;
+      right: 120px;
+    }
+    &__content--7 {
+      bottom: 6%;
+      left: 120px;
+    }
+    &__content--8 {
+      left: 35px;
+    }
+    &__content--10 {
+      left: 30px;
+    }
+    &__content--11 {
+      left: 115px;
+    }
   }
 }
