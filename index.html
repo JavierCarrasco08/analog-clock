@@ -1,12 +1,97 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Analog clock</title>
+    <link
+      rel="shortcut icon"
+      href="./src/assets/image/icon-clock.png"
+      type="image/x-icon" />
   </head>
   <body>
-    <div id="app"></div>
+    <div id="root">
+      <div class="clock__container">
+        <div class="clock__clock">
+          <div class="clock__tools">
+            <div class="clock__toolS">
+              <div class="clock__second"></div>
+            </div>
+            <div class="clock__toolM">
+              <div class="clock__min"></div>
+            </div>
+            <div class="clock__toolH">
+              <div class="clock__hour"></div>
+            </div>
+            <div class="clock__tool"></div>
+          </div>
+          <div class="clock__numbers">
+            <div class="clock__content">
+              <p class="clock__number">12</p>
+            </div>
+            <div class="clock__content">
+              <p class="clock__number">1</p>
+            </div>
+            <div class="clock__content">
+              <p class="clock__number">2</p>
+            </div>
+            <div class="clock__content">
+              <p class="clock__number">3</p>
+            </div>
+            <div class="clock__content">
+              <p class="clock__number">4</p>
+            </div>
+            <div class="clock__content">
+              <p class="clock__number">5</p>
+            </div>
+            <div class="clock__content">
+              <p class="clock__number">6</p>
+            </div>
+            <div class="clock__content">
+              <p class="clock__number">7</p>
+            </div>
+            <div class="clock__content">
+              <p class="clock__number">8</p>
+            </div>
+            <div class="clock__content">
+              <p class="clock__number">9</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="foo">
+        <nav class="foo__nav">
+          <ul class="foo__list">
+            <li class="foo__item">
+              <a
+                class="foo__enlace"
+                href="http://github.com/javiercarrasco08"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Github"
+                ><img
+                  src="./src/assets/svg/github.svg"
+                  alt="Press to go to my github profile"
+                  class="foo__img"
+              /></a>
+            </li>
+            <li class="foo__item">
+              <a
+                class="foo__enlace"
+                href="https://www.linkedin.com/in/javier-carrasco-39123727a/"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="LinkedIn"
+                ><img
+                  src="./src/assets/svg/linkedin.svg"
+                  alt="Press to go to my LinkedIn profile"
+                  class="foo__img"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>
