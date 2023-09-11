@@ -112,6 +112,11 @@ body {
     width: 3.5rem;
     background-color: $primary-background-hour;
     top: -1.7rem;
+    transition: transform 0.5s linear;
+    -webkit-transition: transform 0.5s linear;
+    -moz-transition: transform 0.5s linear;
+    -ms-transition: transform 0.5s linear;
+    -o-transition: transform 0.5s linear;
   }
   &__min::after {
     background-color: $primary-background-min;
@@ -244,10 +249,12 @@ body {
     }
     &__min::after {
       width: 8rem;
+      height: 1.2rem;
       top: -3rem;
     }
     &__hour::after {
       width: 5rem;
+      height: 1.2rem;
       top: -2rem;
     }
     &__content--1 {
